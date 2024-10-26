@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit and Yogurt Parfait</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: linear-gradient(
+          135deg,
+          rgb(246, 206, 236) 10%,
+          rgb(217, 57, 205) 100%
+        );
+        color: rgb(63, 14, 74);
+      }
+      .content-container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        font-size: 45px;
+        text-align: center;
+        font-weight: 800;
+        margin: 20px 0 20px;
+      }
+      h2 {
+        font-size: 30px;
+        text-align: center;
+        padding: 12px;
+        border: 1px solid rgb(107, 97, 109);
+        border-radius: 12px;
+        margin-bottom: 20px;
+      }
+      img {
+        width: 600px;
+        height: 550px;
+        display: block;
+        align-items: center;
+        margin: 7px auto 7px;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 24px;
+        margin: 20px 0 15px;
+      }
+      em,
+      a {
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        background-color: rgb(25, 3, 30);
+        color: rgb(107, 97, 109);
+        padding: 15px 30px;
+        font-size: 16px;
+        border: 1px solid;
+        border-radius: 25px;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        color: rgb(25, 3, 30);
+        background-color: rgb(107, 97, 109);
+        cursor: pointer;
+      }
+      .dev {
+        font-family: monospace;
+        font-size: 20px;
+        text-align: center;
+        margin: 22px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content-container">
+      <h1>PARFAIT</h1>
+      <h2>I love fruit and yogurt parfait!</h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/822/original/Low-Res-9-200x300.jpg?1727768877"
+        alt="fruit_and_yogurt_parfait"
+      />
+      <hr />
+      <p>
+        Parfait is either of two types of dessert. In France, where the dish
+        originated, parfait is made by boiling cream, egg, sugar and syrup to
+        create a custard-like or meringue-like puree which is then frozen. The
+        American version consists of layers differentiated by the inclusion of
+        such ingredients as granola, nuts, yogurt and liqueurs, topped off with
+        fruits or whipped cream. French parfait is usually served in thick,
+        decorated slices on a plate. American parfait is typically served in
+        tall glassware together with a long spoon known as a parfait spoon. The
+        classical parfait glass is stemware, with a short stem and a tall
+        slender bowl, often tapered towards the bottom, also used for serving
+        milkshakes. In South Asia (particularly Bangladesh), parfaits are made
+        in bowl containers, rather than tall glasses.
+        <br /><span><em>
+          <a href="https://en.m.wikipedia.org/wiki/Parfait" target="_blank"></a
+          >See more on Wikipedia
+        </em></span>
+      </p>
+      <button class="tryButton"><strong>TRY PARFAIT</strong></button>
+      <p class="dev">Coded by Comfort Ibok.</p>
+    </div>
+    <script>
+      function tryParfait() {
+        let name = prompt("What is your name?");
+        let mail = prompt("What is your email address?");
+        let quiz = prompt("Have you ever tasted parfait before?").toLowerCase();
+        if (quiz === "yes") {
+          alert(" 🙂 Nice! " + name + ", we'll contact you soon.");
+        } else {
+          alert(" ☹ " + name + ", you need to try fruit and yogurt parfait.");
+        }
+      }
+      let tryButton = document.querySelector("button");
+      tryButton.addEventListener("click", tryParfait);
+    </script>
+  </body>
+</html>
